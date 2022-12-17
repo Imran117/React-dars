@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello react</title>
+</head>
+<body>
+
+  <!-- render qilinadigan elementlar aynan shu appni ichida paydo bo'ladi -->
+  <div id="app"></div>
+
+  <!-- react bilan ishlash uchun kutubxonani ulab olshimiza kerak bo'ladi -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+
+  <!-- reactda virtual dom kerakligi uchun react-dom ham kerak bo'ladi -->
+  <!-- {crossorigin} - ulanayotkan kutubxonalar hamma brauzerga kodi o'qiladigan bo'lishligi uchun -->
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- scriptda yozayotgan kodlarimizani ham crossbrauzerni qilishimiza uchun babel ulaymiza -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- bu joyda reactni asosiy ikkita qismini qilamiza -->
+  <!-- {type="text/babel"} - yozayotkan Js kodimiza eski kodga o'girish uchun -->
+  <script type="text/babel">
+    const rootNode = document.getElementById("app"); // React render qilib qoyish kerak bo'lgan ildizni ulab olamiza
+    // {ReactDOM.createRoot(rootNode)} ildizimizani reactga beramiza 
+    const root = ReactDOM.createRoot(rootNode)
+    // ildiz yani ko'rinish qismiga {JSX} - yordamida {render()} ichiga yozamiza
+    root.render(
+      <h1>Hello React</h1> // app ichiga sarlavha qo'shdik
+    )
+  </script>
+  
+</body>
+</html>
